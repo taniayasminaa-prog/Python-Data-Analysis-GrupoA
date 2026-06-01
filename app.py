@@ -98,7 +98,7 @@ st.pyplot(fig)
 
 st.subheader("🗺️ Distribución Geográfica de las Solicitudes")
 st.markdown("Ubicación e impacto territorial de las solicitudes registradas:")
-st.markdown("No se ve el gráfico:")
+st.markdown("No se ve el mapa:")
 
 df_mapa = df_completo[["Latitud", "Longitud"]].copy()
 df_mapa["lat"] = pd.to_numeric(df_mapa["Latitud"].astype(str).str.replace(',', '.'), errors="coerce")
