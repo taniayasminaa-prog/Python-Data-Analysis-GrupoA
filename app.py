@@ -9,7 +9,7 @@ st.markdown('---')
 
 @st.cache_data
 def cargar_datos_muestras():
-    df = pd.read_csv("data/processed/Base_de_datos_Python_GRUPO A.csv")
+    df = pd.read_csv("C:/Users/tania/PycharmProjects/Python-Data-Analysis-GrupoA/data/processed/Base_de_datos_Python_GRUPO A.csv")
     return df
 
 try:
