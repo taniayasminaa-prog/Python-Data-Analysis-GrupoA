@@ -15,12 +15,11 @@ def cargar_datos_muestras():
 try:
     df_completo = cargar_datos_muestras()
 except FileNotFoundError:
-    st.error("❌ No se encontró el archivo procesado. Asegúrate de ejecutar la Fase 1 primero.")
+    st.error("No se encontró el archivo")
     st.stop()
 
 st.header('📈 Gestión Operativa por Oficina Regional')
 st.info("Distribución de la carga laboral acumulada por territorio administrativo:")
-
 df_completo['Regional'] = df_completo['Regional'].astype(str).str.strip()
 
 chart_data = df_completo['Regional'].value_counts()
