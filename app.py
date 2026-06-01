@@ -23,10 +23,8 @@ st.info("Distribución de la carga laboral acumulada por territorio administrati
 
 df_completo['Regional'] = df_completo['Regional'].astype(str).str.strip()
 
-# Generamos la serie de frecuencias. st.bar_chart usa el índice como eje X
 chart_data = df_completo['Regional'].value_counts()
 
-# Desplegamos el gráfico interactivo directamente en el layout de la app
 st.bar_chart(chart_data)
 
 st.title("Panel de Control: Gestión de Recursos Hídricos")
@@ -100,6 +98,7 @@ st.pyplot(fig)
 
 st.subheader("🗺️ Distribución Geográfica de las Solicitudes")
 st.markdown("Ubicación e impacto territorial de las solicitudes registradas:")
+st.markdown("No se ve el gráfico:")
 
 df_mapa = df_completo[["Latitud", "Longitud"]].copy()
 df_mapa["lat"] = pd.to_numeric(df_mapa["Latitud"].astype(str).str.replace(',', '.'), errors="coerce")
